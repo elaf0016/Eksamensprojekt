@@ -1,0 +1,69 @@
+package com.example.eksamensprojekt.Model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+
+@Entity
+@Table(name="kunde")
+public class Kunde {
+    @Id
+    private int kunde_nr;
+    private String navn;
+    private String email;
+    private String telefonNr;
+    private String adresse;
+
+    public Kunde(){}
+
+    public Kunde(int kunde_nr, String navn, String email, String telefonNr, String adresse) {
+        this.kunde_nr = kunde_nr;
+        this.navn = navn;
+        this.email = email;
+        this.telefonNr = telefonNr;
+        this.adresse = adresse;
+    }
+
+    public int getKunde_nr() {
+        return kunde_nr;
+    }
+
+    public void setKunde_nr(int kunde_nr) {
+        this.kunde_nr = kunde_nr;
+    }
+
+    public String getNavn() {
+        return navn;
+    }
+
+    public void setNavn(String navn) {
+        this.navn = navn;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getTelefonNr() {
+        return telefonNr;
+    }
+
+    public void setTelefonNr(String telefonNr) {
+        this.telefonNr = telefonNr;
+    }
+
+    public String getAdresse() {
+        return adresse;
+    }
+
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
+    }
+}
+
+
